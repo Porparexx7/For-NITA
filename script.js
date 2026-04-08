@@ -1,3 +1,4 @@
+// ดึงค่า Element ต่างๆ
 const loadingScreen = document.getElementById('loading-screen');
 const confessScreen = document.getElementById('confess-screen');
 const questionScreen = document.getElementById('question-screen');
@@ -5,7 +6,7 @@ const resultScreen = document.getElementById('result-screen');
 const noBtn = document.getElementById('no-btn');
 const modal = document.getElementById('myModal');
 
-// 1. จากหน้า Loading ไปหน้า บอกความในใจ (ใช้เวลา 3 วินาที)
+// 1. หน้า Loading ไปหน้า บอกความในใจ (3 วินาที)
 window.onload = function() {
     setTimeout(() => {
         loadingScreen.style.display = 'none';
@@ -13,7 +14,7 @@ window.onload = function() {
     }, 3000);
 };
 
-// 2. จากหน้า บอกความในใจ ไปหน้า ถามขอเป็นแฟน
+// 2. หน้าบอกความในใจ ไปหน้า ถาม
 function goToQuestion() {
     confessScreen.style.display = 'none';
     questionScreen.style.display = 'block';
@@ -35,11 +36,5 @@ noBtn.addEventListener('mouseover', function() {
     noBtn.style.top = y + 'px';
 });
 
-// กรณีเผลอกดปุ่ม ไม่เป็น ได้
-noBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-});
-
-function closeModal() {
-    modal.style.display = 'none';
-}
+noBtn.addEventListener('click', () => { modal.style.display = 'flex'; });
+function closeModal() { modal.style.display = 'none'; }
