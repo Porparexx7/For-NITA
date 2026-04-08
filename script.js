@@ -5,7 +5,7 @@ const resultScreen = document.getElementById('result-screen');
 const noBtn = document.getElementById('no-btn');
 const modal = document.getElementById('myModal');
 
-// 1. จากหน้า Loading ไปหน้า บอกความในใจ
+// 1. จากหน้า Loading ไปหน้า บอกความในใจ (ใช้เวลา 3 วินาที)
 window.onload = function() {
     setTimeout(() => {
         loadingScreen.style.display = 'none';
@@ -35,5 +35,11 @@ noBtn.addEventListener('mouseover', function() {
     noBtn.style.top = y + 'px';
 });
 
-noBtn.addEventListener('click', () => modal.style.display = 'flex');
-function closeModal() { modal.style.display = 'none'; }
+// กรณีเผลอกดปุ่ม ไม่เป็น ได้
+noBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
+
+function closeModal() {
+    modal.style.display = 'none';
+}
