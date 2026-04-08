@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend? ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        <div id="loading-screen">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnBvMW4xd2V2NWltb2Y1NmE5bWp2dTR4cXQzbWVmdHh2YnlnZ3FyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/X8OQ83YI5p25087T6j/giphy.gif" class="loading-gif">
+            <div class="loading-bar">
+                <div class="loading-fill"></div>
+            </div>
+            <p id="loading-text">หน้านี้กำลังโหลด... <br> มีบางอย่างจะบอกเธอ ❤️</p>
+        </div>
+
+        <div id="question-screen">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnJ2MzYxYWlmNXp4cmk2cXQ2OW55YngyejBndW43dm93cm9tYXUzZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/uW8B5vUa5078Nf5Pz6/giphy.gif" class="question-gif">
+            <h1>เป็นแฟนกับเค้าไหม? ❤️</h1>
+            <div class="btn-container">
+                <button class="btn btn-yes" onclick="celebrate()">เป็น</button>
+                <button class="btn btn-no" id="no-btn">ไม่เป็น</button>
+            </div>
+        </div>
+
+        <div id="result-screen">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjQwdWp6YnYzOXJqOXFqYWloNm55bHh2ZndvOWlyYXV5cnBmMjF0OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/LwXyW8H0n26vQp1S4t/giphy.gif" class="result-gif">
+            <h1>เย้! งั้นเราเป็นแฟนกันแล้วนะ ❤️</h1>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p id="modal-text">ฮั่นแน่! กดผิดป่าว? <br> ลองกดใหม่อีกทีซิ 😉</p>
+            <button class="close-btn" onclick="closeModal()">ตกลง</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
